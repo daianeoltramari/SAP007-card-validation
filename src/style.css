@@ -21,6 +21,8 @@
 .titulo > h1 {
   font-size: 3vw;
   color: #77ffc0;
+  text-decoration: underline;
+  text-align: center;
 }
 
 
@@ -142,7 +144,7 @@ label {
   border-radius: 3px;
   top: -30px;
   right: 33px;
-  background: #2f2841;
+  background: #2f284194;
   display: none;
 }
 

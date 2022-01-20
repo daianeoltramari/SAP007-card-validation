@@ -1,11 +1,8 @@
 export default validator;
 
 const validator = {
-   isValid = ("creditCardNumber")
-
+   isValid = ("creditCardNumber").addEventListener('click')
 }
-
-var userNumInput = document.getElementById("creditCardNumber");
 
 function getUserInput(){
    return userNumInput.value;  
@@ -20,7 +17,7 @@ function luhnCheck(){
      return false;  
   }
 
-  if(ccNum.length === 15){  //american express 
+  if(ccNum.length === 15){  
      for(var i = ccNumSplit.length-1; i>=0; i--){
         if(i % 2 === 0){
            singleNums.push(ccNumSplit[i]);
@@ -37,8 +34,8 @@ function luhnCheck(){
         }
      }
   }
-  //joining makes an array to a string and I split them up again
-  //so that every number is a single digit and convert back to array
+  //juntando faz um array para uma string e eu os divido novamente
+  //para que cada número seja um único dígito e converta de volta para array
   
   doubleNums = doubleNums.join("").split("");  
   finalArry = doubleNums.concat(singleNums);
@@ -50,16 +47,17 @@ function luhnCheck(){
   if(sum % 10 === 0){
      validCard = true;
   }
-  //the console log is for you, so you can see the sum, all sums that are
-  //divisible by 10 should be good.  Just open up your console to view.
-  
+  //o log do console é para você, então você pode ver a soma, todas as somas que são
+  //divisível por 10 deve ser bom. Basta abrir o console para visualizar.
+
   console.log(sum);
   return validCard;
 }
 
-function whatCard(){
-   
-}
+
+document.getElementById("submitBtn").addEventListener("click", function(){
+   document.getElementById("resultDiv").innerHTML = luhnCheck();
+}, false);
 
 
 

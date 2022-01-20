@@ -68,12 +68,6 @@ function whatCard(){
 
 
 
-
-
-
-
-
-
 function maskify(creditCardNumber) {
 	if (creditCardNumber.length < 6) return creditCardNumber;
 	const last4Characters = creditCardNumber.substr(-4);

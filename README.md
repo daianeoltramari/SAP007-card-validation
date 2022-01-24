@@ -22,6 +22,10 @@ Neste projeto, você consegue validar o número de um cartão de crédito.
 Além disso, você terá seus dados protegidos pela funcionalidade de ocultação
 dos dígitos do cartão, exceto os quatro últimos.
 
+---
+
+## ✔️ Tela
+
 ![Tela do projeto](tela_card.png)
 
 ---

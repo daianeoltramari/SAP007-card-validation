@@ -13,8 +13,8 @@ Esté projeto é feito com as Tecnologias : HTML, CSS e JavaScript (É uma aplic
 [algoritmo de Luhn](https://en.wikipedia.org/wiki/Luhn_algorithm), que é um método de soma de verificação, 
 usado para validar números de identificação, como o IMEI de telefones celulares, cartões de crédito etc.
 
-![gráfico do algoritmo deLuhn](https://www.101computing.net/wp/wp-content/uploads/Luhn-Algorithm.png)
 
+---
 
 ## 2. Resumo do projeto
 
@@ -23,3 +23,14 @@ Além disso, você terá seus dados protegidos pela funcionalidade de ocultaçã
 dos dígitos do cartão, exceto os quatro últimos.
 
 ![Tela do projeto](tela_card.png)
+
+---
+
+## :robot: Tecnologias Utilizadas
+
+- HTML 5
+- CSS3
+- JavaScript
+- Node.js
+
+---

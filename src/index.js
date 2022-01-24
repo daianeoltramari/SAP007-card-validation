@@ -16,4 +16,5 @@ const button = document.getElementById("button");
      const mask = validator.maskify(cardNumber);
       document.getElementById("cardNumber").value = mask;
   }
+  
 console.log(validator);

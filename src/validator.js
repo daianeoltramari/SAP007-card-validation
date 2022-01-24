@@ -1,75 +1,48 @@
-export default validator;
-
 const validator = {
-   isValid = ("creditCardNumber").addEventListener('click')
-}
 
-function getUserInput(){
-   return userNumInput.value;  
-}
-
-function luhnCheck(){
-  var ccNum = getUserInput(), ccNumSplit = ccNum.split(""), sum = 0;
-  var singleNums = [], doubleNums = [], finalArry = undefined;
-  var validCard = false;
-  
-  if((!/\d{15,16}(~\W[a-zA-Z])*$/g.test(ccNum)) || (ccNum.length > 16)){
-     return false;  
-  }
-
-  if(ccNum.length === 15){  
-     for(var i = ccNumSplit.length-1; i>=0; i--){
-        if(i % 2 === 0){
-           singleNums.push(ccNumSplit[i]);
-        }else{
-           doubleNums.push((ccNumSplit[i] * 2).toString());
-        }
+   isValid: function (cardNumber) {
+     if (cardNumber == "" || cardNumber == null || cardNumber.length > 16) {
+       alert("Informação está incorreta");
      }
-  }else if(ccNum.length === 16){
-     for(var i = ccNumSplit.length-1; i>=0; i--){
-        if(i % 2 !== 0){
-           singleNums.push(ccNumSplit[i]);
-        }else{
-           doubleNums.push((ccNumSplit[i] * 2).toString());
-        }
+ 
+     let cardValidate = "";
+     let cardArr = Array.from(cardNumber).reverse;
+ 
+     for (let i = 0; (i = cardArr.length - 1); i++){
+       if (i % 2 != 0) {
+         cardArr[i] = cardArr[i] * 2;
+       }
+ 
+     if (cardArr[i] > 9) {
+       let rest = cardArr[i] % 10;
+       let aprox = Math.trunc(cardArr[i] / 10);
+       let sum = rest + aprox;
+       cardArr[i] = sum;
+     }}
+ 
+     let total = cardArr.reduce(
+       (total, currentElement) => total + currentElement
+     );
+ 
+     if (total % 10 == 0) {
+       cardValidate = true;
+     } else {
+       cardValidate = false;
      }
-  }
-  //juntando faz um array para uma string e eu os divido novamente
-  //para que cada número seja um único dígito e converta de volta para array
-  
-  doubleNums = doubleNums.join("").split("");  
-  finalArry = doubleNums.concat(singleNums);
-  
-  for(var j = 0; j<finalArry.length; j++){
-     sum += parseInt(finalArry[j]);
-  }
-  
-  if(sum % 10 === 0){
-     validCard = true;
-  }
-  //o log do console é para você, então você pode ver a soma, todas as somas que são
-  //divisível por 10 deve ser bom. Basta abrir o console para visualizar.
-
-  console.log(sum);
-  return validCard;
-}
-
-
-document.getElementById("submitBtn").addEventListener("click", function(){
-   document.getElementById("resultDiv").innerHTML = luhnCheck();
-}, false);
-
-
-
-
-
-
-
-
-function maskify(creditCardNumber) {
-	if (creditCardNumber.length < 6) return creditCardNumber;
-	const last4Characters = creditCardNumber.substr(-4);
-	const firstCharacter = creditCardNumber.substr(0, 1);
-	const maskingCharacters = creditCardNumber.substr(1, creditCardNumber.length - 5).replace(/\d/g, '#');
-	return `${firstCharacter}${maskingCharacters}${last4Characters}`;
-}
+ 
+     return cardValidate;
+   },
+ 
+   maskify: function (cardNumber) {
+     let digitMask = Array.from(cardNumber);
+ 
+     for (let i = 0; i < digitMask.length - 4; i++) {
+       digitMask[i] = "#";
+     }
+     let join = digitMask.join("");
+ 
+     return join;
+   },
+ };
+ 
+ export default validator;

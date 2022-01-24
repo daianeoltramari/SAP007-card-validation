@@ -11,16 +11,20 @@
 </head>
 
 <body>
-  
+  <div class="social-media">
+    <a href="https://www.linkedin.com/in/daianeoltramari/" target="_black">Linkedin</a>
+    <a href="https://github.com/daianeoltramari" target="_black">Github</a>
+  </div>
+
   <div class="titulo">
-    <h1>Informe os dados do seu cartão de Crédito</h1>
+    <h1>Informe os dados do seu cartão de Crédito para validação</h1>
     <img src="creditcard.svg" class="left-imag" alt="creditcard animação">
   </div>
 
-  <div class="camp">
+  <main class="camp">
     <div class="card_number" id="creditCardNumber">
-      <label for="CardNumber">Card Number</label>
-      <input type="text" class="input" id="Card" placeholder="0000 0000 0000 0000" maxlength="16">
+      <label for="cardNumber">Card Number</label>
+      <input type="text" class="input" id="cardNumber" placeholder="0000 0000 0000 0000" maxlength="16" required>
       <div id="logo"></div>
     </div>
 
@@ -44,13 +48,16 @@
       </div>
     </div>
 
-    <button class="botao" type="submit" id="submitBtn" onsubmit="">Verificar</button>
+    <button class="botton" type="submit" id="button" onsubmit="">Verificar</button>
 
-  </div>
+  </main>
   <div id="resultDiv"></div>
+  <footer class="footer">
+    Feito por Daiane Oltramari
+</footer>
 </body>
 
 <script src="validator.js"></script>
-<script src="index.js"></script>
+<script src="index.js" type="module"></script>
 
 </html>

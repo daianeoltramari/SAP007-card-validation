@@ -37,4 +37,3 @@ dos dígitos do cartão, exceto os quatro últimos.
 - JavaScript
 - Node.js
 
----

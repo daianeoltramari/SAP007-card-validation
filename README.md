@@ -1,23 +1,24 @@
 # Cartão de Crédito Válido
 
-## Índice
-
-- [1. Introdução](#1-Introdução)
-- [2. Resumo do projeto](#2-resumo-do-projeto)
-
 ---
 
-## 1. Introdução
+## Introdução
 
 Neste projeto é usado o [algoritmo de Luhn](https://en.wikipedia.org/wiki/Luhn_algorithm), que é um método de soma de verificação, 
 usado para validar números de identificação, como o IMEI de telefones celulares, cartões de crédito etc.
 ---
 
-## 2. Resumo do projeto
+## Resumo do projeto
 
 Neste projeto, você consegue validar o número de um cartão de crédito. 
 Além disso, você terá seus dados protegidos pela funcionalidade de ocultação
 dos dígitos do cartão, exceto os quatro últimos dígitos.
+
+---
+
+## Protótipo 
+
+![Protótipo](Prototipagem.png)
 
 ---
 

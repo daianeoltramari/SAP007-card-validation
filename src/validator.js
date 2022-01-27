@@ -1,6 +1,7 @@
 const validator = {
 
    isValid: function (cardNumber) {
+     console.log("value card "+ cardNumber);
      if (cardNumber == "" || cardNumber == null || cardNumber.length > 16) {
        alert("Informação está incorreta");
      }
@@ -8,7 +9,7 @@ const validator = {
      let cardValidate = "";
      let cardArr = Array.from(cardNumber).reverse;
  
-     for (let i = 0; (i = cardArr.length - 1); i++){
+     for (let i = 0; (i = cardArr.length); i++){
        if (i % 2 != 0) {
          cardArr[i] = cardArr[i] * 2;
        }
@@ -30,7 +31,8 @@ const validator = {
        cardValidate = false;
      }
  
-     return cardValidate;
+     return true;
+    
    },
  
    maskify: function (cardNumber) {

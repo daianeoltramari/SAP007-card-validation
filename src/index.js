@@ -1,20 +1,34 @@
-import validator from './validator.js';
+import validator from "./validator.js";
 
 const button = document.getElementById("button");
+const input = document.getElementById("cardNumber");
+const _validator = validator;
 
- function validate (){
-    let card = document.getElementById("cardNumber").value;
-    const validator = validator.isValid(card);
-     if (validator == true){
+class Main {
 
-     }
-     else (validator == false)
+      constructor() {
+        button.onclick = function() {
+          this.validate();
+        }.bind(this);
+
+        input.onkeyup = function(){
+          this.masker();
+        }.bind(this);
+      }
+
+      validate() {
+        let card = input.value;
+        const validator = _validator.isValid(card);
+        if (validator == true) {
+        } else validator == false;
+      }
+      
+      masker() {
+        let cardNumber = input.value;
+        const mask = _validator.maskify(cardNumber);
+        input.value = mask;
+      }
     
- }
-  function masker (){
-     let cardNumber = document.getElementById("cardNumber").value;
-     const mask = validator.maskify(cardNumber);
-      document.getElementById("cardNumber").value = mask;
-  }
-  
-console.log(validator);
+    }
+    
+new Main();

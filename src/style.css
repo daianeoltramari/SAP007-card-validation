@@ -208,6 +208,10 @@ label {
   text-shadow: none;
  }
 
+.alert{
+  visibility: hidden;
+}
+
  @media only screen and (max-width: 950px){
    .camp{
      width: 85%;

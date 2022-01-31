@@ -1,33 +1,30 @@
 const validator = {
   isValid: function (cardNumber) {
-    let cardValidate = "";
-    let cardArr = Array.from(cardNumber).reverse;
+    let cardValidate = ""; // Variavel que guardará o resultado do cartão (True ou False).
+    let cardArr = Array.from(cardNumber).reverse; // Pegou o valor do input e transformou em uma Array que será percorrida ao inverso
 
-    for (let i = 0; (i = cardArr.length); i++) {
-      if (i % 2 != 0) {
-        cardArr[i] = cardArr[i] * 2;
-      }
-
-      if (cardArr[i] > 9) {
-        let rest = cardArr[i] % 10;
-        let aprox = Math.trunc(cardArr[i] / 10);
-        let sum = rest + aprox;
-        cardArr[i] = sum;
-      }
+    if (cardNumber =="" || cardNumber.length < 16){
+      alert("Informação está incorreta");
     }
 
-    let total = cardArr.reduce(
-      (total, currentElement) => total + currentElement
-    );
+    for (let i = 0; (i = cardArr.length); i++) { //loop que percorre o array invertida
+      if (i % 2 != 0) { // Se o numero for impar
+        cardArr[i] = cardArr[i] * 2; // Multiplica por 2
+    }
 
-    if (total % 10 == 0) {
+      if (cardArr[i] > 9) { //Se o numero for maior que 9
+        cardArr[i] -= 9 //subtrai por 9
+        soma += cardArr[i] // soma os numeros 
+      }
+  
+    if (soma % 10 == 0) { //Se o numero for divisivel por 10
       cardValidate = true;
     } else {
       cardValidate = false;
     }
 
     return true;
-  },
+}},
 
   maskify: function (cardNumber) {
     let digitMask = Array.from(cardNumber);

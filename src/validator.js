@@ -2,6 +2,7 @@ const validator = {
   isValid: function (cardNumber) {
     let cardValidate = ""; // Variavel que guardará o resultado do cartão (True ou False).
     let cardArr = Array.from(cardNumber).reverse; // Pegou o valor do input e transformou em uma Array que será percorrida ao inverso
+    let soma = 0 // variavel que guarda o valor da soma
 
     if (cardNumber =="" || cardNumber.length < 16){
       alert("Informação está incorreta");
@@ -18,9 +19,9 @@ const validator = {
       }
   
     if (soma % 10 == 0) { //Se o numero for divisivel por 10
-      cardValidate = true;
+      cardValidate = true; // vardadeiro
     } else {
-      cardValidate = false;
+      cardValidate = false; // Falso
     }
 
     return true;

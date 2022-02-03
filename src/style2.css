@@ -33,15 +33,6 @@ a:hover {
   background-color: #8bfac6bd;
 }
 
-.logo {
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  align-items: center;
-  color: #ba68c8;
-  font-size: 60px;
-}
-
 /* Tudo que estiver na class titulo*/
 .titulo {
   width: 50vw;
@@ -76,11 +67,11 @@ body {
   align-items: center;
 }
 
-/*Campo Plano Individual*/
-.camp1 {
+/*Campo de preenchimento do card*/
+.camp {
   position: absolute;
-  top: 35%;
-  left: 60%;
+  top: 50%;
+  left: 70%;
   transform: translate(-50%, -50%);
   box-shadow: 0px 10px 40px #00000056;
   max-width: 400px;
@@ -94,62 +85,13 @@ body {
   flex-direction: column;
 }
 
-/*Campo Plano Duoo*/
-.camp2 {
-  position: absolute;
-  top: 35%;
-  left: 85%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0px 10px 40px #00000056;
-  max-width: 400px;
-  width: 60%;
-  background: #2f2841;
-  padding: 20px 20px;
-  border-radius: 25px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+/*Aplicando uma margem entre o campo card e o botão*/
+.card_number {
+  margin-bottom: 20px;
 }
 
-/*Campo Plano Família*/
-.camp3 {
-  position: absolute;
-  top: 78%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0px 10px 40px #00000056;
-  max-width: 400px;
-  width: 60%;
-  background: #2f2841;
-  padding: 20px 20px;
-  border-radius: 25px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}
-
-/*Campo Universitário*/
-.camp4 {
-  position: absolute;
-  top: 78%;
-  left: 85%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0px 10px 40px #00000056;
-  max-width: 400px;
-  width: 60%;
-  background: #2f2841;
-  padding: 20px 20px;
-  border-radius: 25px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}
-
-/* style dos campos H2*/
-h2 {
+/* style dos campos input*/
+input[type="text"] {
   width: 100%;
   padding: 10px;
   border-radius: 10px;
@@ -163,6 +105,10 @@ h2 {
   letter-spacing: 3px;
   margin: 5px;
 }
+/*cor da digitação*/
+input::placeholder {
+  color: #f0ffff94;
+}
 
 /*titulos dos campos*/
 label {
@@ -172,10 +118,70 @@ label {
   font-size: 20px;
 }
 
-h3 {
-  color: #f0ffffde;
-  font-family: Arial;
-  font-size: 17px;
+#card-container {
+  position: relative;
+  width: 100%;
+}
+
+.card_grp {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.expiry_date,
+.cvc {
+  width: 60%;
+  display: flex;
+}
+
+.expiry_date .expiry_input {
+  width: 60px;
+  margin-right: 5px;
+}
+
+.cvc {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.cvc .cvc_input {
+  width: 60px;
+  margin-right: 5px;
+}
+
+.cvc_img {
+  border: 2px solid #fff;
+  width: 25px;
+  height: 25px;
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.cvc_img .img {
+  position: absolute;
+  width: 100px;
+  height: 80px;
+  padding: 5px;
+  border-radius: 3px;
+  top: -30px;
+  right: 33px;
+  background: #2f284194;
+  display: none;
+}
+
+.cvc_img .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.cvc_img:hover .img {
+  display: block;
 }
 
 .botton {
@@ -198,6 +204,10 @@ h3 {
   text-shadow: none;
 }
 
+.alert {
+  visibility: hidden;
+}
+
 @media only screen and (max-width: 950px) {
   .camp {
     width: 85%;
@@ -213,3 +223,17 @@ h3 {
   justify-content: center;
   color: #1e1e2a;
 }
+
+/* Para remover as setinhas do input type 'Number'
+
+/* Chrome, Safari, Edge, Opera 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}*/
+
+/* Firefox 
+input[type="number"] {
+  -moz-appearance: textfield;
+}*/

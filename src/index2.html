@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style2.css">
+
+  <title>Card Validation</title>
+</head>
+
+<body>
+  <div class="social-media">
+    <a href="https://www.linkedin.com/in/daianeoltramari/" target="_black">Linkedin</a>
+    <a href="https://github.com/daianeoltramari" target="_black">Github</a>
+  </div>
+
+  <div class="titulo">
+    <h1>Informe os dados do seu cartão de Crédito</h1>
+    <img src="animation/creditcard.svg" class="left-imag" alt="creditcard animação">
+  </div>
+
+  <main class="camp">
+    <div class="card_number" id="creditCardNumber">
+      <label for="CardNumber">Card Number</label>
+      <input type="text" class="input" id="cardNumber" placeholder="0000 0000 0000 0000" maxlength="16" required>
+      <div id="logo"></div>
+    </div>
+
+
+    <div class="card_grp">
+      <div class="expiry_date">
+        <label for="expirydate">Expiry date</label>
+        <input type="text" class="expiry_input" data-mask="00" placeholder="00" maxlength="2">
+        <input type="text" class="expiry_input" data-mask="00" placeholder="00" maxlength="2">
+      </div>
+
+      <div class="cvc">
+        <label for="CVCnumber">CVV</label>
+        <input type="text" class="cvc_input" data-mask="000" placeholder="000" maxlength="3">
+        <div class="cvc_img">?
+
+          <div class="img">
+            <img src="https://i.imgur.com/2ameC0C.png" alt="img-cvc">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="botton" type="submit" id="button" onsubmit="">Verificar</button>
+    <span id="alert" class="alert">Test</span>
+  </main>
+  <footer class="footer">
+    Made by Daiane Oltramari
+</footer>
+</body>
+
+<script src="validator.js" type="module"></script>
+<script src="index.js" type="module"></script>
+
+</html>

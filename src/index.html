@@ -1,62 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-
-  <title>Card Validation</title>
-</head>
-
-<body>
-  <div class="social-media">
-    <a href="https://www.linkedin.com/in/daianeoltramari/" target="_black">Linkedin</a>
-    <a href="https://github.com/daianeoltramari" target="_black">Github</a>
-  </div>
-
-  <div class="titulo">
-    <h1>Informe os dados do seu cartão de Crédito para validação</h1>
-    <img src="creditcard.svg" class="left-imag" alt="creditcard animação">
-  </div>
-
-  <main class="camp">
-    <div class="card_number" id="creditCardNumber">
-      <label for="CardNumber">Card Number</label>
-      <input type="text" class="input" id="cardNumber" placeholder="0000 0000 0000 0000" maxlength="16" required>
-      <div id="logo"></div>
+    <title>Card Validation</title>
+  </head>
+  <body>
+    <div class="logo">
+      <img src="logo.png" alt="logo">
     </div>
 
-
-    <div class="card_grp">
-      <div class="expiry_date">
-        <label for="expirydate">Expiry date</label>
-        <input type="text" class="expiry_input" data-mask="00" placeholder="00" maxlength="2">
-        <input type="text" class="expiry_input" data-mask="00" placeholder="00" maxlength="2">
-      </div>
-
-      <div class="cvc">
-        <label for="CVCnumber">CVV</label>
-        <input type="text" class="cvc_input" data-mask="000" placeholder="000" maxlength="3">
-        <div class="cvc_img">?
-
-          <div class="img">
-            <img src="https://i.imgur.com/2ameC0C.png" alt="img-cvc">
-          </div>
-        </div>
-      </div>
+    <div class="social-media">
+      <a href="https://www.linkedin.com/in/daianeoltramari/" target="_black">Linkedin</a>
+      <a href="https://github.com/daianeoltramari" target="_black">Github</a>
     </div>
 
-    <button class="botton" type="submit" id="button" onsubmit="">Verificar</button>
-    <span id="alert" class="alert">Test</span>
-  </main>
-  <footer class="footer">
-    Made by Daiane Oltramari
-</footer>
-</body>
+    <div class="titulo">
+      <h1>Planos Music </h1>
+      <img src="animation/listening-happy-music-animate.svg" class="left-imag" alt="music animação"/>
+    </div>
 
-<script src="validator.js" type="module"></script>
-<script src="index.js" type="module"></script>
+    <main class="camp1">
+      <div class="plan1" id="plan1">
+        <label>Plano Individual</label><br>
+        <h2>R$ 19,90/mês</h2><br>
+        <h3>- Ouça músicas sem anúncios <br><br>
 
+          - Ouça em qualquer lugar (até no modo offline) <br><br>
+          
+          - Escolha a música que quer ouvir <br><br>
+          
+          - Faça um plano pré-pago ou uma assinatura <br> </h3>
+      </div>
+      <button class="botton" id="btn1" type="button" onsubmit="">Comprar</button>
+    </main>
+
+    <main class="camp2">
+      <div class="plan2" id="plan2">
+        <label>Plano Duo</label>
+        <h2>R$ 24,90/mês</h2><br>
+        <h3>- 2 contas Premium para um casal que mora junto <br><br>
+
+          - Ouça sem anúncios, no modo offline e sob demanda <br><br>
+          
+          - Faça um plano pré-pago ou uma assinatura <br><br></h3>
+      </div>
+      <button class="botton" id="btn2" type="button" onsubmit="">Comprar</button>
+    </main>
+    
+
+    <main class="camp3">
+      <div class="plan3" id="plan3">
+        <label>Plano Família</label>
+        <h2>R$ 34,90/mês</h2><br>
+        <h3>- 6 contas Premium para familiares que moram no mesmo endereço <br><br>
+
+          - Bloqueie músicas com conteúdo explícito <br><br>
+          
+          - Ouça sem anúncios, no modo offline<br><br>
+          
+          - Kids: um aplicativo separado, feito especialmente para crianças</h3>
+      </div>
+      <button class="botton" id="btn3" type="button" onsubmit="">Comprar</button>
+    </main>
+
+    <main class="camp4">
+      <div class="plan4" id="plan4">
+        <label>Plano Universitário</label>
+        <h2>R$ 9,90/mês</h2><br>
+        <h3>- Desconto especial para estudantes universitários <br><br>
+
+          - Ouça músicas sem anúncios <br><br>
+          
+          - Ouça em qualquer lugar (até no modo offline) <br><br>
+          
+          - Escolha a música que quer ouvir <br><br></h3>
+      </div>
+      <button class="botton" id="btn4" type="button" onsubmit="">Comprar</button>
+    </main>
+
+    <footer class="footer">Made by Daiane Oltramari</footer>
+    <script src="conect.js" type="module"></script>
+  </body>
 </html>

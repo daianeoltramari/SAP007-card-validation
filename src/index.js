@@ -14,9 +14,9 @@ class Main { // O construtor é um método especial para criar e inicializar um 
       this.validate();
     }.bind(this);  //O método bind() cria uma nova função que, quando chamada, tem sua palavra-chave this definida com o valor fornecido
     
-    input.onkeydown = function (event) { // tratando evento espaço
+    input.onkeydown = function (event) { // tratando evento espaço (O evento keydown é disparado quando uma tecla é pressionada.)
       if(event.keyCode === "Backspace"){
-        this.cardNumberAux.pop();
+        this.cardNumberAux.pop(); //método pop remove o último elemento de um array
         return;
       }
       this.masker(event);
@@ -34,7 +34,6 @@ class Main { // O construtor é um método especial para criar e inicializar um 
     }
   }
   masker(event) {
-    console.log(event);
     if(this.cardNumberAux.length == Number ){
       return;
     }
@@ -44,7 +43,7 @@ class Main { // O construtor é um método especial para criar e inicializar um 
   }
   alert(text){
     alert.style.visibility = 'visible'; // deixar visivel o resultado
-    alert.innerHTML = text;
+    alert.innerHTML = text; 
   }
   isNumber(value) { //Tratando o campo para aceitar apenas numeros 
     var regex = /[^0-9.]/;

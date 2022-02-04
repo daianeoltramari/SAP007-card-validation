@@ -19,16 +19,16 @@ dos dígitos do cartão, exceto os quatro últimos dígitos.
 
 ## Protótipo
 
-![Protótipo](Prototipagem1.png)
+![Protótipo tela 1](Prototipagem1.png)
 
-![Protótipo](Prototipagem2.png)
+![Protótipo tela 2](Prototipagem2.png)
 
 ---
 
-## ✔️ Tela
+## ✔️ Telas
 
-![Tela do projeto](tela_home.png)
-![Tela do projeto](tela_card.png)
+![Tela do Home](tela_home.png)
+![Tela do Card](tela_card.png)
 
 ---
 

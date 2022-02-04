@@ -33,15 +33,6 @@ a:hover {
   background-color: #8bfac6bd;
 }
 
-.logo {
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  align-items: center;
-  color: #ba68c8;
-  font-size: 60px;
-}
-
 /* Tudo que estiver na class titulo*/
 .titulo {
   width: 50vw;

@@ -27,6 +27,7 @@ dos dígitos do cartão, exceto os quatro últimos dígitos.
 
 ## ✔️ Tela
 
+![Tela do projeto](tela_home.png)
 ![Tela do projeto](tela_card.png)
 
 ---

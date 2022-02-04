@@ -14,7 +14,7 @@ class Main { // O construtor é um método especial para criar e inicializar um 
       this.validate();
     }.bind(this);  //O método bind() cria uma nova função que, quando chamada, tem sua palavra-chave this definida com o valor fornecido
     
-    input.onkeydown = function (event) {
+    input.onkeydown = function (event) { // tratando evento espaço
       if(event.keyCode === "Backspace"){
         this.cardNumberAux.pop();
         return;
@@ -23,13 +23,14 @@ class Main { // O construtor é um método especial para criar e inicializar um 
     }.bind(this);
   }
   validate() {
-    //let card = input.value;
     let result = _validator.isValid(this.cardNumberAux);
     
     if(result){
       this.alert("Cartão valido");
+      alert.style.color = "green"
     }else{
       this.alert("Cartão invalido");
+      alert.style.color = "red"
     }
   }
   masker(event) {

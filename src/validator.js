@@ -1,26 +1,22 @@
 const validator = {
-  isValid: function (cardNumber) {
-    // função que recebe como parâmetro o valor do meu input
+  isValid: function (cardNumber) {// função que recebe como parâmetro o valor do meu input
 
-    if (cardNumber == "") {
-      // Condições: Se o valor do input for vazio ou maior que 16, mostrar msg para o usúario
+    if (cardNumber == "") {// Condições: Se o valor do input for vazio, mostrar msg para o usúario
       alert("Valor inválido"); // alert para o usúario
       return false;
     }
 
-    let soma = 0; // variavel que guarda o valor da soma
+    let soma = 0; // variavel que irá guarda o valor da soma
     
-    for (let i = 0; i < cardNumber.length; i++) {
-      // for (let variavel = 0; enquanto a variavel for menor que o tamanho do array, incrementa)
-      let tmp = parseInt(cardNumber[i]); //charCodeAt() retorna um número inteiro (transformando minha string em numero)
-      if ((i + 2) %2 === 0)// se o numero for divisivel por 2 e não for 0
-        if ((tmp *= 2) > 9)// Se o numero for maior que 9
-          tmp -= 9; //subtrai por 9
+    for (let i = 0; i < cardNumber.length; i++) {// for (let variavel = 0; enquanto a variavel for menor que o tamanho do array, incrementa)
+      let tmp = parseInt(cardNumber[i]); //Variavel que irá guarda os valores do meu loop (parseInt: transforma minha string em number)
+      if ((i + 2) %2 === 0)
+        if ((tmp *= 2) > 9) // se o numero for divisivel por 2 e menor que 9, soma
+          tmp -= 9; //caso não seja subtrai por 9
 
       soma += tmp; // somando os numeros
     }
-    if (soma % 10 === 0) {
-      //Se o numero for divisivel por 10
+    if (soma % 10 === 0) {//Se o numero for divisivel por 10
       return true; //então é verdadeiro
     }
     return false; //Se não, falso

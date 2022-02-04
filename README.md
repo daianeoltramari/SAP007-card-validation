@@ -7,17 +7,22 @@
 Neste projeto é usado o [algoritmo de Luhn](https://en.wikipedia.org/wiki/Luhn_algorithm), que é um método de soma de verificação,
 usado para validar números de identificação, como o IMEI de telefones celulares, cartões de crédito etc.
 
----
-
-## Resumo do projeto
-
-Neste projeto, você consegue validar o número de um cartão de crédito.
 Além disso, você terá seus dados protegidos pela funcionalidade de ocultação
 dos dígitos do cartão, exceto os quatro últimos dígitos.
 
 ---
 
-## Protótipo
+## 🎶 Resumo do projeto
+
+Projeto baseado em um site que vende pacotes de planos de um aplicativo de musica.
+
+Para realizar uma compra, basta escolher o plano ideal para você e clicar no botão 'COMPRAR'.
+
+Após realizar isso, você será direcionado a outra pagina para validar os dados do seu cartão.
+
+---
+
+## 🎨 Protótipo
 
 ![Protótipo tela 1](Prototipagem1.png)
 

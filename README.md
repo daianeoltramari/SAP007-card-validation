@@ -27,7 +27,7 @@ dos dígitos do cartão, exceto os quatro últimos dígitos.
 
 ## ✔️ Telas
 
-![Tela do Home](tela_home.png)
+![Tela do Home](tela.png)
 ![Tela do Card](tela_card.png)
 
 ---

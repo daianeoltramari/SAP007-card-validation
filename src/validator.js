@@ -10,7 +10,7 @@ const validator = {
     
     for (let i = 0; i < cardNumber.length; i++) {// for (let variavel = 0; enquanto a variavel for menor que o tamanho do array, incrementa)
       let tmp = parseInt(cardNumber[i]); //Variavel que irá guarda os valores do meu loop (parseInt: transforma minha string em number)
-      if ((i + 2) %2 === 0)
+      if ((i + 2) % 2 === 0) // Se o índice for par, dobre o valor.
         if ((tmp *= 2) > 9) // se o numero for divisivel por 2 e menor que 9, soma
           tmp -= 9; //caso não seja subtrai por 9
 

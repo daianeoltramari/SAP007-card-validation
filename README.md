@@ -22,7 +22,7 @@ Após realizar isso, você será direcionado a outra pagina para validar os dado
 
 ---
 
-## 📱 Acesso
+## 💻 Acesso
 
 Click aqui para acessar o projeto -> [Projeto](https://daianeoltramari.github.io/SAP007-card-validation/)
 

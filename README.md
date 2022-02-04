@@ -26,8 +26,10 @@ Após realizar isso, você será direcionado a outra pagina para validar os dado
 
 Click aqui para acessar o projeto -> [Projeto](https://daianeoltramari.github.io/SAP007-card-validation/)
 
-Ou escaneia o QrCode a Baixo <br>
-![QRCode](code.png)
+<!-- Ou escaneia o QrCode a Baixo <br>
+![QRCode](code.png) -->
+
+---
 
 ## 🎨 Protótipo
 

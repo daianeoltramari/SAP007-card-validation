@@ -1,0 +1,67 @@
+# Produto
+Sobre a interface e a usabilidade em geral, não tenho nem palavras pra descrever, está realmente fenomenal!
+
+Interface muito bem construída, micro-transições e animações muito interessantes, além da ótima paleta de cores (dando uma relembrada ao Spotify e o cartão ao NuBank). 
+Só sucesso!
+
+Meu único comentário aqui é que, com todos os cartões que eu coloquei, nenhum deles apareceu como válido. Mas podemos corrigir isso facilmente pelo que vi.
+
+# Aspectos técnicos
+Temos espaço pra melhorar a semântica e a estrutura do nosso HTML. Abusamos muito de `div` e alguns pequenos erros de semântica como vários elementos main na tela 
+(se um conteúdo é principal, não podemos ter vários principais).
+
+Poderíamos ter trabalhado outras tags como `header`, `section`, `nav`, `ul` e `li`. O arquivo `conect.js` poderia ser removido e substituído apenas por links,
+ o que seria mais simples, semântico e evita menos código, já que ele serve apenas para navegar para a segunda página. Links podem ter estilos de botão mas ainda assim se 
+ comportarem e serem semanticamente links.
+
+Gostei da separação das páginas em arquivos diferentes, inclusive no `CSS`. Como você já se preocupa com essa questão de separação e limpeza do código, sugiro a 
+gente dar mais um passo: você poderia ter dividido seu `CSS` em vários arquivos, principalmente pra evitar repetição de estilos que estão nos dois arquivos e pra 
+já começar a entender um pouco de componentização (que ainda vamos ver bastante).
+
+Focou bastante no uso de classes e o `CSS` está bem coerente, não tenho nenhum comentário por aqui também.
+
+Achei o arquivo `index.js` um pouco mais complexo do que poderia ser, temos alguns pontos aqui que podem causar confusão caso não entenda direito:
+- `class` e seus métodos
+- `bind()`
+
+Temos alguns códigos que poderiam ser removidos como o método isNumber. Gostei que realizou a máscara ao digitar um cartão de forma correta. Alguns pequenos ajustes, 
+pois lógicas como `this.cardNumberAux.length == Number` não são válidas.
+
+O arquivo `validator.js` está muito bom e o pequeno ajuste que podemos fazer na lógica para que a validação ocorra corretamente é que todo o laço de repetição e 
+aquela soma dos números deve ocorrer no cartão de trás pra frente. Ou seja, um cartão com o número 12345 deve ser validado como 54321, em sua ordem reversa. 
+Para corrigir isso temos algumas opções como:
+- rodar o laço de repetição ao contrário (começando da última posição e indo até a primeira)
+- inverter o nosso número antes de rodar o laço de repetição (para já entrar no laço corretamente)
+
+Fora isso, o `alert` desse arquivo não deveria estar alí, como é uma resposta ao usuário, deveria ficar no arquivo `index.js` também, deixando o `validator.js` 
+exclusivamente para as lógicas de cartão.
+
+# Considerações finais
+Só tenho elogios ao projeto, de verdade, me surpreendi muito! Meu único ponto de atenção é realmente a pequena falha na lógica que fez com que os cartões não 
+fossem validados e isso é de extrema importância, já que é a funcionalidade principal do projeto.
+
+Como ainda temos mais um dia até o início do próximo projeto, acho que podemos focar em fazer uns pequenos ajustes como:
+- ajustar a lógica de validação para validar o número corretamente, aplicando o laço nos números invertidos
+- ajustar os links e remover o arquivo `conect.js`
+- se tivermos tempo, criar uma nova versão do arquivo `index.js` e adaptar o código para termos uma versão sem a utilização de `class`, não precisa apagar o que tem hoje, 
+mas acho que entender como fazer o mesmo resultado de uma maneira mais simples vai ser muito benéfico pra sua aprendizagem agora também
+
+
+
+
+
+
+
+
+
+
+
+Enviar mensagem para gabrieluizramos
+
+
+
+
+
+
+
+

@@ -3,7 +3,6 @@ import validator from "./validator.js";
 const button = document.getElementById("button");
 const input = document.getElementById("cardNumber");
 const alert = document.getElementById("alert");
-const _validator = validator;
 
 class Main { // O construtor é um método especial para criar e inicializar um objeto criado a partir de uma classe.
   
@@ -14,16 +13,16 @@ class Main { // O construtor é um método especial para criar e inicializar um 
       this.validate();
     }.bind(this);  //O método bind() cria uma nova função que, quando chamada, tem sua palavra-chave this definida com o valor fornecido
     
-    input.onkeydown = function (event) { // tratando evento espaço
+    input.onkeydown = function (event) { // tratando evento espaço (O evento keydown é disparado quando uma tecla é pressionada.)
       if(event.keyCode === "Backspace"){
-        this.cardNumberAux.pop();
+        this.cardNumberAux.pop(); //método pop remove o último elemento de um array
         return;
       }
       this.masker(event);
     }.bind(this);
   }
   validate() {
-    let result = _validator.isValid(this.cardNumberAux);
+    let result = validator.isValid(this.cardNumberAux);
     
     if(result){
       this.alert("Cartão valido");
@@ -34,25 +33,16 @@ class Main { // O construtor é um método especial para criar e inicializar um 
     }
   }
   masker(event) {
-    console.log(event);
     if(this.cardNumberAux.length == Number ){
       return;
     }
     this.cardNumberAux.push(event.key);    
-    let mask = _validator.maskify(input.value);
+    let mask = validator.maskify(input.value);
     input.value = mask;
   }
   alert(text){
     alert.style.visibility = 'visible'; // deixar visivel o resultado
-    alert.innerHTML = text;
-  }
-  isNumber(value) { //Tratando o campo para aceitar apenas numeros 
-    var regex = /[^0-9.]/;
-    regex.lastIndex = 0;
-    if (regex.test(value)) {
-      return false;
-    }
-    return true;
+    alert.innerHTML = text; 
   }
 }
 

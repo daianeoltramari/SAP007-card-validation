@@ -22,7 +22,28 @@ const validator = {
     return false; //Se não, falso
   },
 
-  // cardType: function(cardNumber){ //retorna tipo de cartão
+
+
+  maskify: function (cardNumber) {
+    let digitMask = Array.from(cardNumber);
+    for (let i = 0; i < digitMask.length - 4; i++) {
+      digitMask[i] = "#";
+    }
+    let join = digitMask.join(""); // join junta tudo na string
+    return join;
+  },
+};
+export default validator;
+
+
+
+
+
+
+
+
+
+ // cardType: function(cardNumber){ //retorna tipo de cartão
   //   cardNumber = cardNumber.split(' ').join("");
   //   let o = {
   //     maestro: /^(5818|5020|5038|5612|5893|6304|6759|6761|6762|6763|0604|6390|)\d+$/,
@@ -40,14 +61,3 @@ const validator = {
   //   }
   //   return null;
   // },
-
-  maskify: function (cardNumber) {
-    let digitMask = Array.from(cardNumber);
-    for (let i = 0; i < digitMask.length - 4; i++) {
-      digitMask[i] = "#";
-    }
-    let join = digitMask.join(""); // join junta tudo na string
-    return join;
-  },
-};
-export default validator;
